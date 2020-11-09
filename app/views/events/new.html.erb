@@ -1,0 +1,41 @@
+<h6>Create your event</h6>
+
+<%= form_for(@event, method: :post) do |f| %>
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
+  
+
+  <div class="form-group">
+    <%= f.label :title %><br/>
+    <%= f.text_field :title, autofocus: true, autocomplete: "Title" %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true, autocomplete: "Description" %>
+  </div>
+  <hr>
+   <div class="form-group">
+    <%= f.label :start_date %><br />
+    <%= f.date_field :start_date, autofocus: true, autocomplete: "Start date" %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.label :duration %><br />
+    <%= f.number_field :duration, autofocus: true, autocomplete: "Duration(mn)" %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.label :location %><br />
+    <%= f.text_field :location, autofocus: true, autocomplete: "Location" %>
+  </div>
+  <hr>
+  <div class="form-group">
+    <%= f.label :price %><br />
+    <%= f.number_field :price, autofocus: true, autocomplete: "Price" %>
+  </div>
+  <hr>
+  <div class="actions">
+    <%= f.submit "Submit" %>
+  </div>
+<% end %>

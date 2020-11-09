@@ -64,3 +64,6 @@ gem 'devise'
 gem 'faker'
 gem 'table_print'
 gem 'date'
+gem 'dotenv'
+gem 'letter_opener'
+
